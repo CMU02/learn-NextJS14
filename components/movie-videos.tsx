@@ -13,6 +13,7 @@ async function getVideos(id: string) {
 
 export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideos(id);
+  videos.length = 9; // 보여줄 비디오 갯수
   return (
     <div className={styles.container}>
       {videos.map((video) => (
